@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         /*display(quantity);
         displayPrice(quantity*8);*/
-        String message="Total="+NumberFormat.getCurrencyInstance()+(quantity*8)+"\n Thank You!";
+        String message="Total="+(NumberFormat.getCurrencyInstance().format(quantity*8))+"\n Thank You!";
         displayMessage(message);
     }
     public void incr(View view){
