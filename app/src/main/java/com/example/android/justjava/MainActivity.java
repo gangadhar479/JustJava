@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -32,18 +33,21 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String message="\n ";
+       String name;
+        EditText editText = (EditText) findViewById(R.id.name);
+        name = editText.getText().toString();
+        String message=" coffee order \n name: "+name;
         int price=20;
         boolean cream,coca;
         cream= ((CheckBox) findViewById(R.id.cream)).isChecked();
         coca= ((CheckBox) findViewById(R.id.coca)).isChecked();
         if(coca){
             price+=12;
-            message="\n added coca.";
+            message=message+"\n added coca.";
         }
-        else if(cream){
+        if(cream){
             price+=15;
-            message="\n added cream.";
+            message=message+"\n added cream.";
         }
         message=message+"\n Total="+(NumberFormat.getCurrencyInstance().format(quantity*price))+"\n Thank You!";
         displayOrder(message);
@@ -66,14 +70,7 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
 
-    }
     /**
      * This method displays the given text on the screen.
      */

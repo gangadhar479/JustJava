@@ -19,7 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/name"
-            android:hint="NAME"/>
+            android:hint="NAME"
+            android:textAllCaps="true"
+            android:inputType="textCapWords"/>
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
