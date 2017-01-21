@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             message = message + "\n added cream.";
         }
         message = message + "\n Total=" + (NumberFormat.getCurrencyInstance().format(quantity * price)) + "\n Thank You!";
-       /* displayOrder(message);*/
+        displayOrder(message);
         email(message);
     }
 
@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given text on the screen.
      */
-    /*private  void displayOrder(String message){
+    private  void displayOrder(String message){
         TextView order = (TextView) findViewById(R.id.order_sum);
-        order.setText(message);}*/
+        order.setText(message);}
     public  void email(String message){
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
