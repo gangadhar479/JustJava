@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.justjava.MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:id="@+id/activity_main">
 
     <LinearLayout
-        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.android.justjava.MainActivity">
+        android:paddingTop="@dimen/activity_vertical_margin">
+
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/name"
-            android:hint="NAME"
+            android:hint="@string/name"
             android:textAllCaps="true"
             android:inputType="textCapWords"/>
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cream"
-            android:text="cream"
+            android:text="@string/cream"
             android:textSize="20sp" />
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/coca"
-            android:text="coca"
+            android:text="@string/coca"
             android:textSize="20sp"/>
 
         <TextView
@@ -40,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Quantity"
+            android:text="@string/quantity"
             android:textAllCaps="true"
             android:textSize="16sp"/>
 
@@ -53,13 +54,14 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:onClick="decr"
-                android:text="-" />
+                android:text="@string/s" />
 
             <TextView
                 android:id="@+id/quantity_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/decr"
+                android:layout_toEndOf="@id/decr"
                 android:padding="16dp"
                 android:text="0"
                 android:textColor="#000000"
@@ -70,8 +72,9 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_toRightOf="@id/quantity_text_view"
+                android:layout_toEndOf="@id/quantity_text_view"
                 android:onClick="incr"
-                android:text="+" />
+                android:text="@string/p" />
         </RelativeLayout>
 
         <TextView
@@ -79,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
-            android:text="order summary"
+            android:text="@string/summary"
             android:textSize="16sp"
             android:textAllCaps="true" />
 
@@ -97,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:onClick="submitOrder"
-            android:text="order" />
+            android:text="@string/order" />
 
     </LinearLayout>
 </ScrollView>

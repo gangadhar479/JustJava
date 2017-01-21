@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Just Java</string>
+    <string name="name">name</string>
+    <string name="cream">cream </string>
+    <string name="coca">coco extract</string>
+    <string name="quantity">quantity</string>
+    <string name="s">-</string>
+    <string name="p">+</string>
+    <string name="summary">order summary</string>
+    <string name="order">order</string>
+
 </resources>
